@@ -1,4 +1,5 @@
+// Contratos los cuales tiene garantia extendida
 public interface ConGarantiaExtendida {
 boolean garantiaExtendidaActiva();
-void garantiaExtendida();
+boolean garantiaExtendida();
 }

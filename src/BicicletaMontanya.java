@@ -16,7 +16,7 @@ public class BicicletaMontanya extends Bicicleta {
     }
 
 
-
+    // Calcula el costo base dependiendo si tiene 1 o mas suspensiones
     @Override
     public double costoMantencion() {
         double costoBase = 30.000;

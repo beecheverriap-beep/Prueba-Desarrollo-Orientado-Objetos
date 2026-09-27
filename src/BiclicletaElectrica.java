@@ -38,7 +38,7 @@ private boolean garantiaExtendida;
     }
 
 
-
+// Calcula el costo base dependiendo si este cuanto con certificado o no en la bateria
     @Override
     public double costoMantencion() {
         double costoBase = 45.000;
@@ -48,14 +48,16 @@ private boolean garantiaExtendida;
                 return costoBase;
     }
 
+    // Implementacion de los metodos de la interfaz ConGarantiaExtendida
+
     @Override
     public boolean garantiaExtendidaActiva() {
         return false;
     }
 
     @Override
-    public void garantiaExtendida() {
-
+    public boolean garantiaExtendida() {
+    return garantiaExtendidaActiva();
     }
 
     public void activarGarantiaExtendida() {

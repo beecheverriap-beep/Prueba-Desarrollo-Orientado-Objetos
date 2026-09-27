@@ -1,8 +1,17 @@
+/**
+ * Muestra una clase Bicicleta la cual va a ser usada como abstracta para poder usarla como superclase
+ *  y que las demas la hereden como son la clase bicicleta electrica y de montaña
+ */
+
+
+
 public abstract class Bicicleta {
     private String codigoBicicleta;
     private int añoFabricacion;
     private double peso;
 
+
+    // Inicializa el constructor permitiendo inicializar los atributos
     public Bicicleta(String codigoBicicleta, int añoFabricacion, double  peso) {
         this.codigoBicicleta = codigoBicicleta;
         this.añoFabricacion = añoFabricacion;
@@ -14,7 +23,7 @@ public abstract class Bicicleta {
     public String getCodigoBicicleta() {
         return codigoBicicleta;
     }
-
+   // Validamos el codigo de bicicleta en caso de que un usuario ingrese un dato nulo
     public void setCodigoBicicleta(String codigoBicicleta) {
         if (codigoBicicleta == null) {
             throw new IllegalArgumentException("El codigo del Bicicleta no puede ser nulo");
@@ -26,7 +35,7 @@ public abstract class Bicicleta {
     public int getAñoFabricacion() {
         return añoFabricacion;
     }
-
+ // Valida el codigo de año de fabricacion en caso de que ponga un rango fuera de los que estan permitidos
     public void setAñoFabricacion(int añoFabricacion) {
         if (añoFabricacion < 2000 || añoFabricacion > 2026){
             throw new IllegalArgumentException("El año debe estar entre el rango de 2000 y 2026");
@@ -47,11 +56,10 @@ public abstract class Bicicleta {
 
     @Override
     public String toString() {
-        return "Bicicleta{" +
-                "codigoBicicleta='" + codigoBicicleta + '\'' +
-                ", añoFabricacion=" + añoFabricacion +
-                '}';
+        return "Código: " + codigoBicicleta + " | Año: " + añoFabricacion;
     }
 
+    // Metodo que calcula el costo de mantencion de las distintas bicicletas
     public abstract double costoMantencion();
 }
+

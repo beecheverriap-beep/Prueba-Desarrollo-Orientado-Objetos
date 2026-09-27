@@ -8,6 +8,7 @@ public class GestorTallerBicicletas  {
 
         this.bicicletas = new ArrayList<>();
     }
+    // Registra una bicicleta en la coleccion informandole a la consola del registro recien ingresado
     public void registrarBicicleta(Bicicleta bicicleta) {
         try {
         if (bicicleta != null) {
@@ -17,6 +18,8 @@ public class GestorTallerBicicletas  {
     } catch (InputMismatchException e) {
             System.out.println("Error al registrar la bicicleta: ");
         }
+
+        // Busca las bicicletas cuyo codigo coincida
     }
     public Bicicleta buscarPorCodigo(String codigo) {
         for (Bicicleta b : bicicletas) {
@@ -26,6 +29,9 @@ public class GestorTallerBicicletas  {
         }
         return null;
     }
+
+    // Muestra el listado completo mediante toString()
+
     public void listarBicicletas() {
         System.out.println(" Listado bicicletas");
         for (Bicicleta b : bicicletas) {
